@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <textarea cols="56" rows="5"></textarea> -->
+    <form method="post" action="/api/join">
+        <table  width="400px" bgcolor="whitesmoke" border="1px solid black">
+            
+            <!-- Step1 시작 -->
+            <tr>
+                <th align="left"  height="50" bgcolor="gray" colspan="2">Step1 : 아이디/비번 입력</th>
+            </tr>
+    
+            
+            <tr>
+                <td align="right">아이디 : </td>
+                <td><input type="text" name="id"></td>
+               
+            </tr>
+    
+            <tr>   
+                <td align="right">비밀번호 :</td> 
+                <td><input type="password" name="pw"></td>
+            </tr>
+    
+            <tr>
+                <td align="right">비밀번호 확인:</td> 
+                <td> <input type="password" name="pwcheck" ></td>
+            </tr>
+            <!-- step1 끝 -->
+
+            <!-- step2 시작 -->
+            <tr>
+                <th align="left"  height="50" bgcolor="gray" colspan="2">Step2 : 개인정보</th>
+            </tr>
+    
+            <tr>
+                <td align="right">성별 :</td>
+                <td> 
+                    남<input type="radio" name="gender" value="남"> 
+                    여<input type="radio" name="gender" value="여">
+                </td> 
+            </tr>
+            <tr>
+                <td align="right">혈액형: </td>
+                <td> 
+                    <select name="blood">
+                        <option >A형</option>
+                        <option >B형</option>
+                        <option >O형</option>
+                        <option >AB형</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">생일 : </td>
+                <td><input type="datetime-local" name="date"></td>
+            </tr>
+            <!-- step2 끝 -->
+
+            <!-- step3 시작 -->
+            <tr>
+                <th align="left" height="50" bgcolor="gray" colspan="2">Step3: 선호도</th>
+            </tr>
+    
+            <tr>
+                <td align="center" colspan="2">
+                    취미 :
+                    축구:  <input type="checkbox" name="hb" value="축구">  
+                    야구:  <input type="checkbox" name="hb" value="야구">
+                    농구:  <input type="checkbox" name="hb" value="농구">
+                </td>
+                
+            </tr>
+            <tr>
+                <td colspan="2" align="center">좋아하는 색깔 
+                    <input type="color" name="color">
+                </td>
+            </tr>
+            <!-- step3 끝 -->
+
+            <!-- step4 시작 -->
+            <tr>
+                <th align="left" height="50" bgcolor="gray" colspan="2">Step4 : 적고싶은 말</th>
+            </tr>
+    
+            <th colspan="2">
+                 <textarea rows="5" cols="60" name="area">
+                    
+                </textarea>
+            </th>
+            
+            <tr>
+                <td align="center" colspan="2">
+                    <input type="submit" value="제출" name="POST"> 
+                    <input type="reset" value="초기화">
+                </td>
+            </tr>
+            <!-- step4 끝 -->
+            
+        </table>
+    </form>
+    
+</body>
+</html>
