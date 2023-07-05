@@ -9,7 +9,7 @@ const server = http.createServer(async(req,res)=>{ //async는 await를 사용하
     let reqUrl = req.url
     let pathname = url.parse(reqUrl, true).pathname;
 
-    console.log(req.method);
+    // console.log(req.method);
 
     
     if(pathname === '/api/form'){
