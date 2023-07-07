@@ -20,7 +20,7 @@ nunjucks.configure('views', {
 
 })
 
-
+app.use(express.urlencoded({extended : true})) //body 데이터를 다룰 수 있음
 
 app.use ('/', indexRouter) // localhost:8888/...
 
