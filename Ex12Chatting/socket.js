@@ -1,8 +1,12 @@
 const socketIO = require('socket.io')
                     //express server
-module.exports = (server) =>{
+module.exports = (server, app) =>{
     //socketIO 객체 생성
     const io = socketIO(server, {path : '/socket.io'})
+
+    //socketIO를 라우터에서 사용할 수 있도록 작성
+    app.set('io',io)
+    
 
     //라우팅(-> 네임스페이스 : 경로)
     //채팅 -> /chat
@@ -26,7 +30,8 @@ module.exports = (server) =>{
         })
 
         socket.on('chat', (data)=>{ //data : 채팅 관련 데이터
-            
+            // console.log('socket.js : ', data);
+            socket.to(data.roomid).emit(data)
         })
     })
 

@@ -48,5 +48,6 @@ app.set('port', process.env.PORT||8888)
 const server = app.listen(app.get('port'), ()=>{
     console.log(app.get('port'), '번 포트에서 서버 연결 기다리는중...');
 })
-
-webSocket(server)
+// server: 서버 객체
+// app : express로 만든 app 객체
+webSocket(server, app)

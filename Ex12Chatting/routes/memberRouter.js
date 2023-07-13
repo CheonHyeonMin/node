@@ -10,7 +10,6 @@ router.post('/login', async (req, res, next) => {
         const member = await Member.findOne({
             where : {id : id, pw : pw}
         })
-
         req.session.member = member
 
         req.session.save(function() {
