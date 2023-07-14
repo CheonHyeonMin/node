@@ -18,6 +18,10 @@ sequelize.sync({force : false})
 .catch((err)=>{
     console.log(err);
 })
+
+//정적 리소스 경로 지정(css, js(front-end)...)
+app.use(express.static(__dirname+'/public'))
+
 app.use(express.urlencoded({extended:true}))
 app.use(bodyParser.json())// json 형태 데이터 다룰 때 추가!
 // app.use(bodyParser.json()) postman에서 사용할때  body에서 넘겨주는 타입이 json이라서 써준것임
