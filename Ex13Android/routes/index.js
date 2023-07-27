@@ -19,7 +19,7 @@ router.post('/join', (req,res)=>{
         }
         else{ //오류 발생하지 않았을 때
             // console.log(rows);
-            if(rows.affectedRows>0){
+            if(rows.affectedRows>0){  
                 res.send('Success')
             }
             else{
